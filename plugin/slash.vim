@@ -38,7 +38,7 @@ endfunction
 function! s:trailer()
   augroup slash
     autocmd!
-    autocmd CursorMoved,CursorMovedI * set nohlsearch | autocmd! slash
+    autocmd CursorMoved,CursorMovedI * autocmd! slash
   augroup END
 
   let seq = foldclosed('.') != -1 ? 'zv' : ''
